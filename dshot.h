@@ -9,6 +9,9 @@
 #ifndef __DSHOT_H__
 #define __DSHOT_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "tim.h"    	// header from stm32cubemx code generate
 #include <stdbool.h>	
@@ -68,5 +71,9 @@ typedef enum
 void dshot_init(dshot_type_e dshot_type);
 void dshot_write(uint16_t* motor_value);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __DSHOT_H__ */
